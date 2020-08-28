@@ -1,0 +1,38 @@
+[
+  {
+    "productName": "bEAR",
+    "productDescription": "Bear toy with a lot of text just to tezt how it behaves and I must say that it rocks, because as you can see it's awesome",
+    "imageURL": "./assets/images/bear.jpeg",
+    "stockQuantity": 5
+  },
+  {
+    "productName": "Bunny ",
+    "productDescription": "A rabbit toy",
+    "imageURL": "./assets/images/bunny.jpeg",
+    "stockQuantity": 17
+  },
+  {
+    "productName": "LION",
+    "productDescription": "A lion toy",
+    "imageURL": "./assets/images/lion.jpeg",
+    "stockQuantity": 13
+  },
+  {
+    "productName": "PADA",
+    "productDescription": "Never say no to a panda",
+    "imageURL": "./assets/images/panda.jpeg",
+    "stockQuantity": 9
+  },
+  {
+    "productName": "PIG",
+    "productDescription": "Please don't break it",
+    "imageURL": "./assets/images/pig.jpeg",
+    "stockQuantity": 3
+  },
+  {
+    "productName": "ZOO",
+    "productDescription": "Toys kit",
+    "imageURL": "./assets/images/zoo.jpeg",
+    "stockQuantity": 0
+  }
+]

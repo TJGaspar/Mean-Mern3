@@ -1,0 +1,36 @@
+<div>
+  <h5 class="m-0">{{ productName }}</h5>
+  <span>{{ productDescription }}</span>
+  <div class="media">
+    <img
+      class="mr-3 rounded align-self-center img-fluid"
+      style="width: 300px"
+      [src]="product.imageURL"
+      alt=""
+    />
+    <div class="media-body align-self-center">
+      <div
+        class="card d-flex container justify-content-center text-center my-2"
+        style="width: 100px"
+        [ngStyle]="{
+          'background-color':
+            stockQuantity > 0
+              ? stockQuantity > 1
+                ? stockQuantity > 15
+                  ? 'green'
+                  : 'yellow'
+                : 'orange'
+              : 'red'
+        }"
+      >
+        {{ stockQuantity }}
+      </div>
+      <section Class="text-center">
+        <button (click)="increaseProduct(product)">+</button>
+        <button (click)="decreaseProduct(product)">-</button>
+      </section>
+    </div>
+    <!-- media body -->
+  </div>
+  <!-- media -->
+</div>
