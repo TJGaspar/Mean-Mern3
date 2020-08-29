@@ -1,27 +1,88 @@
-# Learnangular5
+# MEAN-MERN2
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.5.
+Practical exercises for MEAN/MEARN certification
 
-## Development server
+---
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Description
 
-## Code scaffolding
+---
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+This is a cart page API made using Angular.
+This API allows a user to add products with a certain ammout of stock to the cart.
+It takes in consideration the following cenarios:
 
-## Build
+- Scenario: 1. Webshop initial load
+  GIVEN a store
+  WHEN I enter it for the first time or if I refresh the page
+  THEN I can see (as presented in the mock below)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+store title
+cart icon
+0 as the number of items that exist in my cart
+"Items" string
+3 products each with the following: a name, description, image, stock quantity (with the green indication that has high availability) and increase and decrease buttons
 
-## Running unit tests
+- Scenario: 2. Add products to cart
+  GIVEN that there is still stock for a given product
+  WHEN I click in the + button of a that product
+  THEN number of items in the cart is increased
+  THEN number of available stock for that product is decreased
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- Scenario: 3. Remove products from cart
+  GIVEN that a given product has been added to the cart
+  WHEN I click in the - button of a that product
+  THEN number of items in the cart is decreased
+  THEN number of available stock for that product is increased
 
-## Running end-to-end tests
+- Scenario: 4. Stock Level Info Display
+  GIVEN that I have a product displayed with a given stock level
+  WHEN the stock level is >= 16
+  THEN stock color indicator should be green
+  WHEN the stock level is 6 <= 15
+  THEN stock color indicator should be yellow
+  WHEN the stock level is 1 <= 5
+  THEN stock color indicator should be orange
+  WHEN the stock level is 0 == 0  
+  THEN stock color indicator should be red
+  THEN it should not be possible to add more of this product to the cart
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+---
 
-## Further help
+Requirements
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+---
+
+To use this API youll need to make sure the port 3000 is free
+
+---
+
+How to install
+
+---
+
+After downloading the repository from https://github.com/TJGaspar/Mean-Mern3
+
+1- Open a command window
+2- On the command window go to the root of the folder where you have the project
+3- Run the command "npm install" to install the dependencies
+4- Run the command "npm start" to start the API
+
+---
+
+How to use:
+
+---
+
+After running the command ng serve
+Open a browser and go to "localhost:4200"
+
+Now you can:
+Click on the buttons + to add products to the cart
+Click on the buttons - to remove products to the cart
+
+---
+
+Thank You
+
+---

@@ -5,6 +5,9 @@ import {HttpClientModule} from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { ProductsComponent } from './products/products.component';
 
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
+
+
 
 @NgModule({
   declarations: [
@@ -12,7 +15,8 @@ import { ProductsComponent } from './products/products.component';
     ProductsComponent
   ],
   imports: [
-    BrowserModule, HttpClientModule
+    BrowserModule, HttpClientModule, AngularFontAwesomeModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

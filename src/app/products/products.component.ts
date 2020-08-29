@@ -7,7 +7,6 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
     `
       .button-container {
         width: 100px;
-        
       }
     `,
   ],

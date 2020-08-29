@@ -24,9 +24,15 @@
       >
         {{ stockQuantity }}
       </div>
-      <section Class="text-center button-container ">
-        <button class="btn-sm" (click)="increaseProduct(product)">+</button>
-        <button class="btn-sm" (click)="decreaseProduct(product)">-</button>
+      <section
+        Class="d-flex container justify-content-center text-center button-container "
+      >
+        <button class="btn-sm mx-1" (click)="increaseProduct(product)">
+          +
+        </button>
+        <button class="btn-sm mx-1" (click)="decreaseProduct(product)">
+          -
+        </button>
       </section>
     </div>
     <!-- media body -->
