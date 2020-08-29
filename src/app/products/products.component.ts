@@ -3,6 +3,14 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
+  styles: [
+    `
+      .button-container {
+        width: 100px;
+        
+      }
+    `,
+  ],
   inputs:['product']
 })
 export class ProductsComponent implements OnInit {
@@ -26,14 +34,10 @@ export class ProductsComponent implements OnInit {
    increaseProduct(){
     if (this.stockQuantity>0){
       this.stockQuantity--;
-      console.log(this.stockQuantity)
       this.decreaseCart.emit();
     }
    }
    decreaseProduct(){
-    console.log("caiu aqui")
-    console.log(this.stockQuantity)
-    console.log(this.product.stockQuantity)
     if (this.stockQuantity < this.product.stockQuantity){
       this.stockQuantity++;
       this.increaseCart.emit();

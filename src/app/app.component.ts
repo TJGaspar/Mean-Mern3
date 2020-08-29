@@ -1,21 +1,23 @@
-import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-
+import { Component, OnInit } from "@angular/core";
+import { HttpClient } from "@angular/common/http";
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
+  selector: "app-root",
+  templateUrl: "./app.component.html",
   styles: [
     `
       .list-group-item:first-child {
         border-top-left-radius: 0;
         border-top-right-radius: 0;
-        border-top: 0;
-      } `
-  ]
+      }
+      .number-container {
+        width: 100px;
+      }
+    `,
+  ],
 })
 //--------------------StoreClass---------------------
-export class AppComponent implements OnInit{
+export class AppComponent implements OnInit {
   products: object;
   items: number;
 
@@ -23,20 +25,19 @@ export class AppComponent implements OnInit{
     this.items = 0;
   }
 
-  ngOnInit():void{
-    this.http.get<Object>('../assets/data.json').subscribe(data => {
+  ngOnInit(): void {
+    this.http.get<Object>("../assets/data.json").subscribe((data) => {
       this.products = data;
-    })
+    });
   }
 
-  increaseCart(){
-    console.log("less cart")
-     if (this.items > 0){
-       return this.items--;
-      }
-   }
-   
-   decreaseCart(){
-     return this.items++;
-   }
+  increaseCart() {
+    if (this.items > 0) {
+      return this.items--;
+    }
+  }
+
+  decreaseCart() {
+    return this.items++;
+  }
 }
