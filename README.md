@@ -53,7 +53,7 @@ Requirements
 
 ---
 
-To use this API youll need to make sure the port 3000 is free
+To use this API youll need to make sure the port 4200 is free
 
 ---
 
