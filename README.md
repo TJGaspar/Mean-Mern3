@@ -1,4 +1,4 @@
-# MEAN-MERN2
+# MEAN-MERN3
 
 Practical exercises for MEAN/MEARN certification
 
@@ -66,11 +66,11 @@ After downloading the repository from https://github.com/TJGaspar/Mean-Mern3
 1- Open a command window
 2- On the command window go to the root of the folder where you have the project
 3- Run the command "npm install" to install the dependencies
-4- Run the command "npm start" to start the API
+4- Run the command "ng serve" to start the API
 
 ---
 
-How to use:
+How to use:§
 
 ---
 
