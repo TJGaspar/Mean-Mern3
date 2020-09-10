@@ -1,7 +1,6 @@
 {
-  "name": "learnangular5",
+  "name": "cart2",
   "version": "0.0.0",
-  "license": "MIT",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
